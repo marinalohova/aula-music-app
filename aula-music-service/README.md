@@ -10,11 +10,6 @@ In the project directory, you can run:
 Runs the app in the development mode.<br>
 Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ## Available Endpoints
 
 **List Tracks**
@@ -47,8 +42,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 * **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
-    **Content:** `{ error : "Endpoint doesn't exist" }`
+  * **Code:** 500 SERVER ERROR <br />
+    **Content:** `{ error : "Couldn't load tracks" }`
 
 * **Sample Call:**
 
@@ -60,13 +55,13 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## List of Improvements
 
-Normally I would use Sequelize for database. So in real life I would have tables such as tracks, artists, artists_tracks
-to create N-N association. And I would create corresponding models to leverage Sequelize automatic mapping.
-For the purpose of this task I learned [lowdb](https://github.com/typicode/lowdb), a tiny lodash-based database,
-and stored all the info in the single table ‘tracks’. I do know how to make normalized data :)
+### Sequelize
+Normally, I would use [Sequelize](http://docs.sequelizejs.com/) database. With Sequelize, I would have tables such as tracks, artists, and artists_tracks to create N-N association. I would create corresponding models to leverage Sequelize automatic mapping.
+For the purpose of this task I learned [lowdb](https://github.com/typicode/lowdb), a tiny Lodash-based database. With lowdb, for the purpose of the task, I stored all the info in a single table ‘tracks’. But I do know how to make normalized data :)
 
-Unfortunately, I didn't have time left for tests, but again in real world situation I definitely provide test coverage.
-I can still add tests on the weekend, if you are curious.
+## Testing
+Unfortunately, I didn't have time left for tests, but in real world situation I would definitely provide test coverage. I can still add tests on the weekend, if you are curious.
 
+## MusicKit JS
 I researched MusicKit Js and originally planned to import songs and their metadata from Itunes,
-rather than manually inserting them (yuck!), but again, not enough time for that. I can definitely add that if you are curious.
+rather than manually inserting them (yuck!), but again, not enough time for that. I can definitely add that, if you are curious.
