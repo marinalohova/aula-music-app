@@ -13,27 +13,32 @@ Open [http://localhost:3000](http://localhost:3000) to load Aula Music App.
 
 ## Learn More
 
-You will find the code for Player component in src/components/Player.js.
-You will find List of tracks with pagination in src/container/Tracks/List.js.
-You will find Details for a particular track in src/container/Tracks/Details.js
-API calls can be found in src/actions/tracks.js
-Redux Player actions can be found in src/actions/player.js
+### Components
+You will find Player component in src/components/Player.js.
+### Containers
+You will find List view with pagination in src/containers/Tracks/List.js.
+You will find Details view in src/containers/Tracks/Details.js
+### Redux
+API calls can be found in src/actions/tracks.js.
+Redux Player actions can be found in src/actions/player.js.
+### Config
 The frontend is connected to the backend through the 'proxy' field in package.json
+### Pagination
+Please, switch Rows per page in the Paginator to 1 in order to test pagination.
 
-Particularly proud of building Player UI with [Material UI](https://material-ui.com/) that I haven't used prior.
-It was a short learning curve, but so far I'm liking it. I tried to copy iTunes, that's why the song details are a form,
-the song list is a grid with the similar to iTunes column names, and clicking on the song title starts playing the song from the start - all the features found on iTunes.
+### Inspiration
+I'm pretty proud of building Player UI with [Material UI](https://material-ui.com/) that I haven't used prior.
+It was a short learning curve, but so far I'm liking it. I tried to copy iTunes, that's why the Details view is a form,
+the List view is a grid similar to iTunes, and clicking on the song title starts playing the song from the start - all the features found on iTunes.
 
-Please, switch Rows per page in the pagination to 1 in order to test pagination.
+## List of Improvements
 
-### List of Improvements
-
-If I had more time I would've added the following to UX:
- -- Added the scrubber to the Player
- -- Connected Prev, Rewind buttons
- -- Progress loading indicators
- -- Saving functionality to the Details form.
- -- Support for different environments, such as Development, Production, etc
- -- Integration tests
- -- Sass support and Webpack, since that's what I use in real world situations. Not entirely sold on having styles in the components,
+If I had more time, I would've added the following:
+ - Added the scrubber to the Player. I decided to create a customized Player rather than using HTML5 <audio> tag, because I wanted it to look pretty. But like with any customized solution, it adds extra effort to create parts of the player tha come with <audio> tag by default. 
+ - Connected Prev, Rewind buttons.
+ - Progress loading indicators.
+ - Saving functionality to the Details form.
+ - Support for different environments and ENV variables, such as Development, Production, etc
+ - Integration tests.
+ - Sass support and Webpack, since that's what I use in real world situations. Not entirely sold on having styles in the components,
   as suggested by Material UI documentation.
