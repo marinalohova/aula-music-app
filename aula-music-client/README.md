@@ -34,11 +34,11 @@ the List view is a grid similar to iTunes, and clicking on the song title starts
 ## List of Improvements
 
 If I had more time, I would've added the following:
- - Added the scrubber to the Player. I decided to create a customized Player rather than using HTML5 <audio> tag, because I wanted it to look pretty. But like with any customized solution, it adds extra effort to create parts of the player tha come with <audio> tag by default. 
- - Connected Prev, Rewind buttons.
- - Progress loading indicators.
- - Saving functionality to the Details form.
+ - Add the scrubber to the Player. I decided to create a customized Player rather than using HTML5 <audio> tag, because I wanted it to look pretty. But like with any customized solution, it adds extra effort to create parts of the player that come with the `<audio>` tag by default. 
+ - Connect Prev, Rewind buttons.
+ - Add progress indicators.
+ - 'Save' button and functionality in the Details form.
  - Support for different environments and ENV variables, such as Development, Production, etc
- - Integration tests.
- - Sass support and Webpack, since that's what I use in real world situations. Not entirely sold on having styles in the components,
-  as suggested by Material UI documentation.
+ - Add integration tests.
+ - Add Sass support and Webpack, since that's what I use daily. Not entirely sold on having styles in the components,
+  as suggested by the Material UI documentation.
