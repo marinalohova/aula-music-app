@@ -105,9 +105,9 @@ module.exports = app => {
 Normally, I would use [Sequelize](http://docs.sequelizejs.com/) database. With Sequelize, I would have tables such as tracks, artists, and artists_tracks to create N-N association. I would create the corresponding models to leverage Sequelize automatic mapping.
 For the purpose of this task I learned [lowdb](https://github.com/typicode/lowdb), a tiny Lodash-based database. With lowdb, I stored all the info in a single table ‘tracks’. But I do know how to make normalized data :)
 
-## Testing
+### Testing
 Unfortunately, I didn't have time left for tests, but in real world situation I would definitely provide test coverage. I can still add tests on the weekend, if you are curious.
 
-## MusicKit JS
+### MusicKit JS
 I researched MusicKit Js and originally planned to import songs and their metadata from Itunes,
 rather than manually inserting them (yuck!), but again, not enough time for that. I can definitely add that, if you are curious.
