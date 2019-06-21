@@ -71,7 +71,7 @@ Then you can reference those in /routes/tracks.js, as such:
 module.exports = app => {
     app.post('/tracks',
         async (req, res) => {
-            var newTrack = request.body;
+            var newTrack = req.body;
             var result = await TrackController.create(newTrack);
             res.json({result});
         });
@@ -86,7 +86,7 @@ const routes = [
 };
 ```
   
-And in /routes/artists.js
+And in /routes/artists.js:
 
 ```javascript
 module.exports = app => {
