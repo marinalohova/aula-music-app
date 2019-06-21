@@ -102,7 +102,7 @@ module.exports = app => {
 ## List of Improvements
 
 ### Sequelize
-Normally, I would use [Sequelize](http://docs.sequelizejs.com/) database. With Sequelize, I would have tables such as tracks, artists, and artists_tracks to create N-N association. I would create the corresponding models to leverage Sequelize automatic mapping.
+Normally, I would use [Sequelize](http://docs.sequelizejs.com/) + PostgreSql/Sqlite database. With Sequelize, I would have tables such as tracks, artists, and artists_tracks to create N-N association. I would create the corresponding models to leverage Sequelize automatic mapping.
 For the purpose of this task I learned [lowdb](https://github.com/typicode/lowdb), a tiny Lodash-based database. With lowdb, I stored all the info in a single table ‘tracks’. But I do know how to make normalized data :)
 
 ### Testing
