@@ -21,7 +21,7 @@ You will find Details view in src/containers/Tracks/Details.js
 ### Redux
 API calls can be found in src/actions/tracks.js.
 Redux Player actions can be found in src/actions/player.js.
-### Config
+### Configuration
 The frontend is connected to the backend through the 'proxy' field in package.json
 ### Pagination
 Please, switch Rows per page in the Paginator to 1 in order to test pagination.
@@ -34,11 +34,11 @@ the List view is a grid similar to iTunes, and clicking on the song title starts
 ## List of Improvements
 
 If I had more time, I would've added the following:
- - Add the scrubber to the Player. I decided to create a customized Player rather than using HTML5 <audio> tag, because I wanted it to look pretty. But like with any customized solution, it adds extra effort to create parts of the player that come with the `<audio>` tag by default. 
- - Connect Prev, Rewind buttons.
+ - Add the scrubber to the Player. I decided to create a customized Player rather than using HTML5 <audio> tag, because I wanted it to look pretty. But like with any customized solution, there is extra effort to create features that come with the `<audio>` tag by default. 
+ - Hook up Previous Track and Next Track buttons in the Player.
  - Add progress indicators.
- - 'Save' button and functionality in the Details form.
- - Support for different environments and ENV variables, such as Development, Production, etc
+ - Add 'Save' button and corresponding functionality in the Details form.
+ - Add support for different environments, such as Development, Production, etc
  - Add integration tests.
  - Add Sass support and Webpack, since that's what I use daily. Not entirely sold on having styles in the components,
   as suggested by the Material UI documentation.
