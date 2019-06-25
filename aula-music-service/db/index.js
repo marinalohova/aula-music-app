@@ -2,8 +2,9 @@
 
 const low = require('lowdb');
 const FileAsync = require('lowdb/adapters/FileAsync');
+const env = require('./../env');
 
-const adapter = new FileAsync('./db/aula.json');
+const adapter = new FileAsync(env.DATABASE_URL);
 
 const db = low(adapter);
 

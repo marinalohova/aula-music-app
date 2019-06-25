@@ -1,19 +1,34 @@
-const express = require('express');
-const router = require('./routes/index');
-const appRouter = express.Router();
-const app = express();
 require('express-async-errors');
-const port = 5000;
+const express = require('express');
+const routes = require('./routes');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const db = require('./db');
+const env = require('./env');
 const path = require('path');
 
-router.route(appRouter);
+const app = express();
 
-app.use('/api', appRouter);
-app.use(express.static(path.join(__dirname, 'public')));
-app.use((err, req, res) => {
-    console.error(err.stack);
-    res.status(500).send({error: err.message})
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static(path.join(__dirname, env.ASSETS_DIR)));
+
+// Routes
+app.use(env.SERVICE_PREFIX, routes);
+
+// 404 Not Found
+app.get('*', function(req, res) {
+  res.status(404).send({error: 'Resource not found'});
 });
 
-app.listen(port, () => console.log(`Aula Music API listening on port ${port}!`));
+// Error Handling
+app.use((err, req, res) => {
+  console.error(err.stack);
+  res.status(500).send({error: err.message});
+});
+
+app.listen(env.SERVICE_PORT, () => console.log(`Aula Music API listening on port ${env.SERVICE_PORT}!`));
+
 

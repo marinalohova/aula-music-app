@@ -1,35 +1,25 @@
-var TrackController = require('../controller/trackController');
+const {list, download} = require('../controller/tracks');
 const PAGE_SIZE = 5;
 
-module.exports = app => {
+const express = require('express');
+const router = express.Router();
 
-    app.get('/tracks',
-        async (req, res) => {
-            var options = {
-                page: req.query.page || 1,
-                page_size: req.query.page_size || PAGE_SIZE
-            };
-            
-            var {paginated, totals} = await TrackController.list(options);
-            res.json({paginated, totals});
-        });
+router.get('/',
+    async (req, res) => {
+      const options = {
+        page: req.query.page || 1,
+        page_size: req.query.page_size || PAGE_SIZE,
+      };
 
-    app.get('/tracks/:id',
+      const {paginated, totals} = await list(options);
 
-        (req, res) => {
+      res.json({paginated, totals});
+    });
 
-            res.json({});
-        });
+router.get('/:id/download',
 
-    app.patch('/tracks/:id',
+    async (req, res) => {
+      res.json({});
+    });
 
-        (req, res) => {
-            res.json({});
-        });
-
-    app.delete('/tracks/:id',
-
-        (req, res) => {
-            res.json({});
-        });
-};
+module.exports = router;

@@ -1,0 +1,29 @@
+{
+  "development": {
+    "assets": {
+      "dir": "assets"
+    },
+    "database": {
+      "url": "./db/aula.json"
+    },
+    "service": {
+      "port": 5000,
+      "host": "http://localhost",
+      "prefix": "/api"
+    }
+  },
+  "production": {
+    "assets": {
+      "dir": "assets"
+    },
+    "database": {
+      "host": "db.example.com",
+      "port": "3306"
+    },
+    "service": {
+      "port": 5000,
+      "host": "http://example.com",
+      "prefix": "/api"
+    }
+  }
+}

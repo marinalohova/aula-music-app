@@ -1,13 +1,9 @@
 'use strict';
 
-const routes = [
-    require('./tracks.js')
-];
+const express = require('express');
+const router = express.Router();
 
-module.exports = {
-    route: (app) => {
-        return routes.map((route) => {
-            return route(app);
-        });
-    }
-};
+
+router.use('/tracks', require('./tracks'));
+
+module.exports = router;
